@@ -1,0 +1,6 @@
+﻿@using DependencyInjection.Services
+@inject GreeterService greeter3
+
+<h1>Hello @ViewBag.greeter1.Greet() from CTOR DI</h1>
+<h1>Hello @ViewBag.greeter2.Greet() from Activate Prop DI</h1>
+<h1>Hello @ViewBag.greeter3.Greet() from Razor DI</h1>
