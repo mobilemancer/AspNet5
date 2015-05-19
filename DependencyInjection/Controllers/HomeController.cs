@@ -7,7 +7,7 @@ namespace DependencyInjection.Controllers
     {
         private GreeterService gs1;
 
-        [Activate]
+        [FromServices]
         public GreeterService GreeterService { get; set; }
 
 

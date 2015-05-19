@@ -6,7 +6,7 @@
 
         public GreeterService()
         {
-            counter = 5;
+            counter = 1;
         }
 
         public string Greet()
