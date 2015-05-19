@@ -4,8 +4,9 @@ using WebAPI.Services;
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class GreeterController : Controller
+    public class GreeterController //: Controller
     {
+
         [FromServices]
         public GreeterService GreeterService { get; set; }
 
