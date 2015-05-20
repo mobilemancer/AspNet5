@@ -1,16 +1,14 @@
 ﻿using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
-using DependencyInjection.Services;
 
-namespace DependencyInjection
+namespace ViewComponents
 {
     public class Startup
     {
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<GreeterService, GreeterService>();
-
             services.AddMvc();
         }
 
@@ -20,10 +18,7 @@ namespace DependencyInjection
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "Home", action = "Index" });
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

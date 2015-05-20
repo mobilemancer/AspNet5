@@ -1,6 +1,15 @@
 ﻿@using DependencyInjection.Services
 @inject GreeterService greeter3
 
-<h1>Hello @ViewBag.greeter1.Greet() from CTOR DI</h1>
-<h1>Hello @ViewBag.greeter2.Greet() from FromServices Property DI</h1>
-<h1>Hello @greeter3.Greet() from Razor DI</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/demo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Hello @ViewBag.greeter1.Greet() from <i>CTOR</i> DI</h1>
+    <h1>Hello @ViewBag.greeter2.Greet() from <i>[FromServices]</i> Property DI</h1>
+    <h1>Hello @greeter3.Greet() from <i>Razor Inject</i> DI</h1>
+</body>
+</html>

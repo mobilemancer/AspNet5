@@ -13,20 +13,18 @@ namespace ModularPipeline
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            //services.AddMvc();        //2
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            //app.UseStaticFiles();
+            //app.UseWelcomePage();     //1
 
-            //app.UseWelcomePage();
-
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });
-
+            //app.UseStaticFiles();     //2
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            //});
 
             app.Run(async (context) =>
             {
