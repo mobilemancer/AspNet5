@@ -10,6 +10,7 @@ namespace TagHelpers
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<GreeterService, GreeterService>();
+
             services.AddMvc();
         }
 
